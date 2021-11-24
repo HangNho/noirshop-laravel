@@ -323,20 +323,12 @@ ol {
 	margin-right: 0;
 }
 
-.header__top__right__language {
+.header__top__right__auth__register {
 	position: relative;
-	display: inline-block;
 	margin-right: 40px;
-	cursor: pointer;
 }
 
-.header__top__right__language:hover ul {
-	top: 23px;
-	opacity: 1;
-	visibility: visible;
-}
-
-.header__top__right__language:after {
+.header__top__right__auth__register:after {
 	position: absolute;
 	right: -21px;
 	top: 1px;
@@ -347,62 +339,19 @@ ol {
 	content: "";
 }
 
-.header__top__right__language img {
-	margin-right: 6px;
-}
-
-.header__top__right__language div {
-	font-size: 14px;
-	color: #1c1c1c;
-	display: inline-block;
-	margin-right: 4px;
-}
-
-.header__top__right__language span {
-	font-size: 14px;
-	color: #1c1c1c;
-	position: relative;
-	top: 2px;
-}
-
-.header__top__right__language ul {
-	background: #222222;
-	width: 100px;
-	text-align: left;
-	padding: 5px 0;
-	position: absolute;
-	left: 0;
-	top: 43px;
-	z-index: 9;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all, 0.3s;
-	-moz-transition: all, 0.3s;
-	-ms-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
-}
-
-.header__top__right__language ul li {
-	list-style: none;
-}
-
-.header__top__right__language ul li a {
-	font-size: 14px;
-	color: #ffffff;
-	padding: 5px 10px;
-}
-
+.header__top__right__auth__register,
 .header__top__right__auth {
 	display: inline-block;
 }
 
+.header__top__right__auth__register a,
 .header__top__right__auth a {
 	display: block;
 	font-size: 14px;
 	color: #1c1c1c;
 }
 
+.header__top__right__auth__register a i,
 .header__top__right__auth a i {
 	margin-right: 6px;
 }

@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		@include('auth.header');
+		@include('auth.head')
 	</head>
 	
 	<body class="hold-transition login-page">
 		<div class="login-box">
 			<div class="login-logo">
-				<a href="#"><b>Admin Noir Lee</b></a>
+				<a href="/"><b>Noir Lee</b> Shop</a>
 			</div>
 			<div class="card">
 				<div class="card-body login-card-body">
@@ -16,7 +16,7 @@
 
 					@include('alert')
 
-					<form action="/login/store" method="post">
+					<form action="/login/attempt" method="post">
 						<div class="input-group mb-3">
 							<input type="email" name="email" class="form-control" placeholder="Email">
 							<div class="input-group-append">
@@ -67,6 +67,6 @@
 			</div>
 		</div>
 
-		@include('auth.footer');
+		@include('auth.footer')
 	</body>
 </html>

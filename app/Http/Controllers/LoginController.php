@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function index(Request $request) {
+        // if (isset(Auth::user())) {
+        //     return redirect()->route('home');
+        // }
+        echo(Auth::user());
         return view('auth.login.index', ['title' => 'Login']);
     }
 
