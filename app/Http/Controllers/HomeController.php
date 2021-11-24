@@ -9,7 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
-        echo 'Xin chào User, '. $user->name;
+        // $user = Auth::user();
+        // echo 'Xin chào User, '. $user->name;
+        return view('home', [
+            'title' => 'Home'
+        ]);
     }
 }

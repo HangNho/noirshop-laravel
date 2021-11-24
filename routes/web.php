@@ -18,7 +18,3 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/store', [LoginController::class, 'store']);
-
-Route::middleware('auth')->group(function (){
-    Route::get('/', [HomeController::class, 'index'])->name('home');
-});

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 23, 2021 at 04:16 AM
+-- Generation Time: Nov 24, 2021 at 07:23 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -398,9 +398,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'avatar-default.png',
-  `status` tinyint(1) DEFAULT '0',
+  `email_verified_at` timestamp NULL DEFAULT NULL,
   `roll` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'user',
   `code` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -410,8 +411,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `address`, `avatar`, `status`, `code`, `created_at`) VALUES
-(1, 'Admin', 'admin@admin.com', '$2y$10$XKDh3Rqvkj6oHcBqHF3Pe.sxAPp/08F0urXdYLLeIdKxHcCEDO3li', NULL, 'HCM', 'avatar-default.png', 0, '', '2021-11-19 09:41:16');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `address`, `avatar`, `email_verified_at`, `roll`, `code`, `remember_token`, `created_at`) VALUES
+(1, 'Admin', 'admin@admin.com', '$2y$10$McquWJ0ElM1jKwXovpIVueUiGYlaMbl49PqlMv.FciuKwdkeObHD2', NULL, 'HCM', 'avatar-default.png', '0000-00-00 00:00:00', 'admin', '', NULL, '2021-11-19 09:41:16');
 
 --
 -- Triggers `users`
