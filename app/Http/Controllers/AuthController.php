@@ -23,9 +23,21 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $credentials = $request->only(['email', 'password']);
-        if (Auth::attempt($credentials, $request->input('remember'))) {
+        $data = $request->only(['email', 'password']);
+        if (Auth::attempt([
+            'email' => $data['email'],
+            'password' => $data['password'],
+            'roll' => 'user'
+        ], $request->input('remember'))) {
+            
             return redirect()->route('home');
+        
+        } elseif (Auth::attempt([
+            'email' => $data['email'],
+            'password' => $data['password'],
+            'roll' => 'admin'
+        ], $request->input('remember'))) {
+            return redirect()->route('admin');
         }
 
         Session::flash('error', 'Email hoặc mật khẩu không đúng!');
@@ -61,7 +73,7 @@ class AuthController extends Controller
             Session::flash('success', 'Đăng ký thành viên thành công ;)');
             return redirect()->back();
         }
-        
+
         Session::flash('error', 'Thông tin không chính xác!');
         return redirect()->back()->withInput();
     }

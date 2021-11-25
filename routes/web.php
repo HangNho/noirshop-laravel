@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -14,3 +15,9 @@ Route::get('/register', [AuthController::class, 'create'])->name('register');
 Route::post('/register/store', [AuthController::class, 'store']);
 
 Route::get('/logout', [AuthController::class, 'destroy']);
+
+
+
+// ADMIN
+
+Route::get('/admin', [DashboardController::class, 'index'])->name('admin');
