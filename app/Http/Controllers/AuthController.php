@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Auth\RegisterFormRequest;
+use App\Http\Services\User\UserService;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -9,6 +11,13 @@ use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
+    protected $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     public function index()
     {
         if (Auth::check()) {
@@ -52,25 +61,11 @@ class AuthController extends Controller
         return view('auth.register.index', ['title' => 'Register']);
     }
 
-    public function store(Request $request)
+    public function store(RegisterFormRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email:filter', 
-            'password' => 'required',
-            'passwordRetype' => 'required'
-        ]);
-
         if ($request->input('password') === $request->input('passwordRetype')) {
-            $user = User::create([
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'password' => bcrypt($request->input('password'))
-            ]);
-
-            $user->save();
+            $this->userService->create($request);
             
-            Session::flash('success', 'Đăng ký thành viên thành công ;)');
             return redirect()->back();
         }
 
@@ -78,14 +73,13 @@ class AuthController extends Controller
         return redirect()->back()->withInput();
     }
 
-    public function show($id)
-    {
-        //
+    public function show() {
+
     }
 
-    public function edit($id)
+    public function edit()
     {
-        //
+        
     }
 
     public function update(Request $request, $id)

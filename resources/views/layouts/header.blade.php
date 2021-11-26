@@ -7,7 +7,7 @@
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="#"><img src="template/img/logo.png" alt=""></a>
+        <a href="#"><img src="template/img/logo.jpg" alt=""></a>
     </div>
     <div class="humberger__menu__cart">
         <ul>
@@ -110,7 +110,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="./template/index.html"><img src="./template/img/logo.png" alt=""></a>
+                    <a href="./template/index.html"><img src="./template/img/logo.jpg" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">

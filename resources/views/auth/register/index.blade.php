@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         @include('auth.head')
+
     </head>
     <body class="hold-transition register-page">
         <div class="register-box">
@@ -14,7 +16,7 @@
                 <div class="card-body register-card-body">
                 <p class="login-box-msg">Register a new membership</p>
 
-                @include('alert')
+                @include('layouts.alert')
 
                 <form action="/register/store" method="post">
                     @csrf

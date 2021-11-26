@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		
 		@include('auth.head')
+
 	</head>
 	
 	<body class="hold-transition login-page">
@@ -14,7 +16,7 @@
 				<div class="card-body login-card-body">
 					<p class="login-box-msg">Sign in to start your session</p>
 
-					@include('alert')
+					@include('layouts.alert')
 
 					<form action="/login/attempt" method="post">
 						<div class="input-group mb-3">
