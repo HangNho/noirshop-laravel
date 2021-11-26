@@ -116,18 +116,9 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="./template/index.html">Home</a></li>
-                        <li><a href="./template/shop-grid.html">Shop</a></li>
-                        <li><a href="#">Pages</a>
-                            <ul class="header__menu__dropdown">
-                                <li><a href="./template/shop-details.html">Shop Details</a></li>
-                                <li><a href="./template/shoping-cart.html">Shoping Cart</a></li>
-                                <li><a href="./template/checkout.html">Check Out</a></li>
-                                <li><a href="./template/blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./template/blog.html">Blog</a></li>
-                        <li><a href="./template/contact.html">Contact</a></li>
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/shop">Shop</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
