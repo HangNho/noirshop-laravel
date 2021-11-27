@@ -116,9 +116,15 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
+<<<<<<< HEAD
                         <li class="active"><a href="./template/index.html">Home</a></li>
                         <li><a href="./template/shop-grid.html">Shop</a></li>
                         <li><a href="./template/contact.html">Contact</a></li>
+=======
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/shop">Shop</a></li>
+                        <li><a href="/contact">Contact</a></li>
+>>>>>>> origin/feature/shop
                     </ul>
                 </nav>
             </div>
