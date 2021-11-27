@@ -639,7 +639,7 @@ ol {
 }
 
 .hero__search__form {
-	width: 610px;
+	width: 910px;
 	height: 50px;
 	border: 1px solid #ebebeb;
 	position: relative;
@@ -709,6 +709,10 @@ ol {
 	border-radius: 50%;
 	float: left;
 	margin-right: 20px;
+}
+
+.hero__search__phone__icon:hover {
+	color: #636363;
 }
 
 .hero__search__phone__text {

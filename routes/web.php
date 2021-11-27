@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-
+// Auth
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -15,6 +16,12 @@ Route::get('/register', [AuthController::class, 'create'])->name('register');
 Route::post('/register/store', [AuthController::class, 'store']);
 
 Route::get('/logout', [AuthController::class, 'destroy']);
+// End Auth
+
+
+// Page
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+// End Page
 
 
 
