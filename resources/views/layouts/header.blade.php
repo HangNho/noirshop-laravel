@@ -118,15 +118,6 @@
                     <ul>
                         <li class="active"><a href="./template/index.html">Home</a></li>
                         <li><a href="./template/shop-grid.html">Shop</a></li>
-                        <li><a href="#">Pages</a>
-                            <ul class="header__menu__dropdown">
-                                <li><a href="./template/shop-details.html">Shop Details</a></li>
-                                <li><a href="./template/shoping-cart.html">Shoping Cart</a></li>
-                                <li><a href="./template/checkout.html">Check Out</a></li>
-                                <li><a href="./template/blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./template/blog.html">Blog</a></li>
                         <li><a href="./template/contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -134,10 +125,10 @@
             <div class="col-lg-3">
                 <div class="header__cart">
                     <ul>
-                        <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>{{ isset($cart) ? $cart['count_items'] : 0; }}</span></a></li>
                     </ul>
-                    <div class="header__cart__price">item: <span>$150.00</span></div>
+                    <div class="header__cart__price">item: <span>{{ isset($cart) ? $cart['total'] : '0.00'; }}</span> 💳</div>
                 </div>
             </div>
         </div>

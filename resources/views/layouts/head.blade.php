@@ -16,3 +16,5 @@
 <link rel="stylesheet" href="template/css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="template/css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="template/css/style.css" type="text/css">
+
+@yield('head')
